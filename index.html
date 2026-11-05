@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Molla – digitala produkter, musik och 3D</title>
-<meta name="description" content="Molla bygger appar och digitala verktyg. Här samlas Livok, PlejT:H:M, musik och 3D-printing, och på sikt rådgivning inom säkerhet, beredskap och AI.">
+<meta name="description" content="Molla bygger appar och digitala verktyg. Här samlas Livok, PlejT:H:M, musik och 3D-printing.">
 <meta name="theme-color" content="#08090c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -117,15 +117,6 @@ nav ul a{transition:color .2s}nav ul a:hover{color:var(--text)}
 .stack i{position:absolute;inset:0;border:1px solid #6ee7c866;border-radius:16px;background:#6ee7c808;animation:lift 4s ease-in-out infinite}
 @keyframes lift{0%,100%{transform:translateZ(calc(var(--n)*6px))}50%{transform:translateZ(calc(var(--n)*16px))}}
 
-/* Rådgivning */
-.advice{border:1px solid var(--line);border-radius:24px;padding:64px;background:linear-gradient(135deg,var(--card),var(--bg));display:grid;grid-template-columns:1.1fr 1fr;gap:60px}
-.svc{display:flex;flex-direction:column}
-.svc div{padding:22px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:50px 1fr;gap:4px 10px}
-.svc div:first-child{border-top:1px solid var(--line)}
-.svc .n{color:var(--accent);grid-row:span 2}
-.svc h4{font:600 20px "Inter Tight";letter-spacing:-.02em}
-.svc p{color:var(--muted);font-size:15px}
-
 /* Kontakt */
 .contact{padding:170px 0 120px;text-align:center}
 .contact h2{font-size:clamp(44px,7vw,104px);margin:0 auto}
@@ -138,8 +129,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
 
 @media (max-width:900px){
   nav ul{display:none}
-  .g2,.g3,.split,.advice{grid-template-columns:1fr}
-  .advice{padding:36px 26px;gap:30px}
+  .g2,.g3,.split{grid-template-columns:1fr}
   .showcase{height:440px;gap:16px}
   .showcase .phone{width:210px;height:430px}
   .showcase .phone.side{display:none}
@@ -160,7 +150,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
   <ul>
     <li><a href="#appar">Appar</a></li>
     <li><a href="#skapande">Musik & 3D</a></li>
-    <li><a href="#radgivning">Rådgivning</a></li>
   </ul>
   <a href="#kontakt" class="btn ghost">Kontakt</a>
 </div></nav>
@@ -169,7 +158,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
   <span class="status mono"><b></b>Livok och PlejT:H:M under utveckling</span>
   <h1 id="h1">Jag bygger digitala verktyg <em>som gör vardagen enklare.</em></h1>
   <div class="hero-foot">
-    <p>Molla är hemmet för mina appar, min musik och mina 3D-projekt. Med erfarenhet av säkerhet och beredskap i grunden, och AI som verktyg.</p>
+    <p>Molla är hemmet för mina appar, min musik och mina 3D-projekt. Allt byggs från idé till färdig produkt, ett projekt i taget.</p>
     <div class="cta">
       <a href="#appar" class="btn primary">Se apparna <span class="arr">→</span></a>
       <a href="#kontakt" class="btn ghost">Hör av dig</a>
@@ -202,8 +191,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
 </header>
 
 <div class="ticker mono"><div class="track">
-  <span>Apputveckling</span><span>AI</span><span>Säkerhet</span><span>Beredskap</span><span>Musik</span><span>3D-printing</span>
-  <span>Apputveckling</span><span>AI</span><span>Säkerhet</span><span>Beredskap</span><span>Musik</span><span>3D-printing</span>
+  <span>Apputveckling</span><span>Design</span><span>Musik</span><span>3D-printing</span><span>Idéer</span><span>Prototyper</span>
+  <span>Apputveckling</span><span>Design</span><span>Musik</span><span>3D-printing</span><span>Idéer</span><span>Prototyper</span>
 </div></div>
 
 <section class="wrap sec" id="appar">
@@ -252,26 +241,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
   </div>
 </section>
 
-<section class="wrap sec" id="radgivning" style="padding-top:40px">
-  <div class="advice reveal">
-    <div>
-      <div class="label mono">03 / Rådgivning · kommer</div>
-      <h2 style="font-size:clamp(32px,4vw,52px)">Säkerhet, beredskap och AI i praktiken.</h2>
-      <p class="lead">På sikt tar jag uppdrag där erfarenhet av säkerhet och beredskap möter modern teknik. Intresserad redan nu? Hör av dig.</p>
-    </div>
-    <div class="svc">
-      <div><span class="n mono">01</span><h4>Säkerhet</h4><p>Riskbedömning och rutiner som håller i vardagen.</p></div>
-      <div><span class="n mono">02</span><h4>Beredskap</h4><p>Planering och övning inför störningar och kris.</p></div>
-      <div><span class="n mono">03</span><h4>AI</h4><p>Verktyg och arbetssätt som faktiskt sparar tid.</p></div>
-    </div>
-  </div>
-</section>
-
 <section class="wrap contact" id="kontakt">
   <div class="reveal">
     <div class="label mono" style="justify-content:center">Kontakt</div>
     <h2>Låt oss bygga<br>något tillsammans.</h2>
-    <p class="lead">Frågor om apparna, samarbeten eller uppdrag. Jag svarar så snart jag kan.</p>
+    <p class="lead">Frågor om apparna, musiken eller samarbeten. Jag svarar så snart jag kan.</p>
     <a href="mailto:hej@molla.se" class="btn primary">hej@molla.se <span class="arr">→</span></a>
   </div>
 </section>
