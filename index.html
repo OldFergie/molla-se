@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#08090c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#08090c; --bg2:#0d0f14; --card:#111318; --card2:#161921; --line:#ffffff12; --line2:#ffffff22;
@@ -62,7 +62,7 @@ nav ul a{transition:color .2s}nav ul a:hover{color:var(--text)}
 
 /* Showcase */
 .showcase{position:relative;margin-top:30px;border-radius:24px;border:1px solid var(--line);background:linear-gradient(180deg,var(--card),var(--bg2));
-  height:560px;overflow:hidden;display:flex;justify-content:center;align-items:flex-end;gap:40px;padding-top:60px}
+  height:560px;overflow:hidden;display:flex;justify-content:center;align-items:flex-end;gap:28px;padding:60px 24px 0}
 .showcase::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 50% 110%,#6ee7c833,transparent 70%)}
 .phone{position:relative;width:260px;height:530px;border-radius:44px;background:#0a0b0f;border:1px solid #ffffff1f;
   box-shadow:0 0 0 7px #15171d,0 50px 100px #000c;padding:26px 18px;transform:translateY(60px);will-change:transform}
@@ -75,6 +75,38 @@ nav ul a{transition:color .2s}nav ul a:hover{color:var(--text)}
 .bar i{display:block;height:100%;background:var(--accent);border-radius:9px}
 .ring{width:110px;height:110px;margin:6px auto 18px;border-radius:50%;background:conic-gradient(var(--accent) 0 72%,#ffffff12 72% 100%);display:grid;place-items:center}
 .ring span{width:88px;height:88px;border-radius:50%;background:#0a0b0f;display:grid;place-items:center;font:600 22px "Inter Tight"}
+
+
+/* Livok (riktig app-stil) */
+.tablet{position:relative;flex:0 1 640px;min-width:0;height:470px;border-radius:30px;background:#121418;border:1px solid #ffffff1f;box-shadow:0 0 0 8px #15171d,0 50px 100px #000c;
+  padding:16px;transform:translateY(60px);will-change:transform;display:flex;flex-direction:column;gap:12px;font-family:Inter,sans-serif;color:#F2F4F7}
+.lv-bar{display:flex;justify-content:space-between;align-items:center;padding:4px 6px}
+.lv-logo{width:74px;height:auto;display:block}
+.lv-open{font-size:11px;font-weight:700;background:#F2F4F7;color:#0A0B0D;border-radius:7px;padding:6px 10px}
+.lv-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;flex:1}
+.lv-pane{background:#0A0B0D;border:1px solid #2A2F38;border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:10px;overflow:hidden}
+.lv-k{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#A0A7B2}
+.lv-t{font:700 19px "Space Grotesk",sans-serif;letter-spacing:-.01em}
+.lv-se{display:flex;justify-content:space-between;font-size:11px;font-weight:700;margin-top:8px;font-variant-numeric:tabular-nums}.lv-se span+span{color:#A0A7B2}
+.lv-tl{position:relative;height:16px;border-radius:8px;background:#1A1D23;margin:22px 0 10px}
+.lv-sel{position:absolute;left:31%;width:40%;top:0;bottom:0;background:#FF6B2C;opacity:.3;animation:sel 6s ease-in-out infinite}
+.lv-head{position:absolute;left:31%;top:-14px;width:3px;height:44px;background:#F2F4F7;animation:playhead 6s linear infinite}
+.lv-tri{position:absolute;left:calc(31% - 9px);top:-24px;border-left:9px solid transparent;border-right:9px solid transparent;border-top:11px solid #FF6B2C}
+.lv-end{position:absolute;left:71%;top:-7px;width:2px;height:30px;background:#A0A7B2}
+@keyframes playhead{0%{left:31%}100%{left:71%}}
+@keyframes sel{50%{opacity:.45}}
+.lv-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.lv-btns span{font-size:11px;font-weight:700;border:1px solid #3B424D;border-radius:8px;padding:8px 10px}
+.lv-btns .w{background:#F2F4F7;color:#0A0B0D;border-color:#F2F4F7;margin-left:auto}
+.lv-sh{display:flex;justify-content:space-between;align-items:baseline}.lv-sh small,.lv-row small{font-size:11px;color:#A0A7B2;white-space:nowrap}
+.lv-row{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;border-top:1px solid #1F232A;padding-top:9px;font-size:13px}
+.lv-row b{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lv-row i{width:30px;height:30px;border-radius:50%;border:1px solid #3B424D;display:grid;place-items:center}.lv-row i svg{width:12px;height:12px}
+.lv-row:nth-of-type(2) i{border-color:#FF6B2C;background:#FF6B2C22}
+.app-vis.livok{background:radial-gradient(ellipse 80% 90% at 50% 120%,#FF6B2C2e,transparent 70%),var(--bg2);padding:34px 34px 0}
+.app-vis.livok .lv-pane{height:100%;border-radius:14px 14px 0 0;border-bottom:0;transform:translateY(20px);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.card:hover .app-vis.livok .lv-pane{transform:none}
+.pill.live i{background:#FF6B2C}
 
 /* Logos/marquee */
 .ticker{border-block:1px solid var(--line);overflow:hidden;padding:22px 0;color:var(--dim)}
@@ -133,6 +165,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
   .showcase{height:440px;gap:16px}
   .showcase .phone{width:210px;height:430px}
   .showcase .phone.side{display:none}
+  .tablet{height:400px;padding:10px}.lv-grid{grid-template-columns:1fr}.lv-grid .lv-pane+.lv-pane{display:none}
   .sec{padding:100px 0}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.hero h1 .w{opacity:1;transform:none;filter:none}}
@@ -155,7 +188,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
 </div></nav>
 
 <header class="wrap hero">
-  <span class="status mono"><b></b>Livok och PlejT:H:M under utveckling</span>
+  <span class="status mono"><b></b>Livok är ute · PlejT på väg</span>
   <h1 id="h1">Jag bygger digitala verktyg <em>som gör vardagen enklare.</em></h1>
   <div class="hero-foot">
     <p>Molla är hemmet för mina appar, min musik och mina 3D-projekt. Allt byggs från idé till färdig produkt, ett projekt i taget.</p>
@@ -172,17 +205,17 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
       <div class="row">Vecka <small>12 / 15</small></div>
       <div class="row" style="display:block">Framsteg<div class="bar"><i style="width:80%;background:var(--accent2)"></i></div></div>
     </div>
-    <div class="phone" data-speed="0.05">
-      <div class="island"></div>
-      <div class="ph-h">Livok</div><div class="ph-s">God morgon</div>
-      <div class="ring"><span>72%</span></div>
-      <div class="row">Dagens fokus <small>2 kvar</small></div>
-      <div class="row" style="display:block">Vecka<div class="bar"><i style="width:64%"></i></div></div>
+    <div class="tablet" data-speed="0.05" aria-label="Livok på iPad">
+      <div class="lv-bar"><svg class="lv-logo" viewBox="-24 -4 1052 248" role="img" aria-label="LIVOK"><path d="M0 20H52V168H150V220H0Z M182 86H234V220H182Z M288 20H354L396 150L438 20H504L430 220H362Z M790 20H842V220H790Z M836 132L926 20H1000L872 172Z M880 118L1004 220H928L842 152Z" fill="#F2F4F7"/><path d="M628 20H658A100 100 0 0 1 658 220H628A100 100 0 0 1 628 20Z M628 72H658A48 48 0 0 1 658 168H628A48 48 0 0 1 628 72Z" fill="#F2F4F7" fill-rule="evenodd"/><path d="M160 20H256L208 66Z" fill="#FF6B2C"/></svg><span class="lv-open">Öppna appen</span></div>
+      <div class="lv-grid"><div class="lv-pane"><span class="lv-k">Nytt ljudklipp</span><span class="lv-t">Favoritrefrängen</span>
+<div class="lv-se"><span>START 0:14.0</span><span>SLUT 0:32.0</span></div>
+<div class="lv-tl"><div class="lv-sel"></div><div class="lv-head"></div><div class="lv-tri"></div><div class="lv-end"></div></div>
+<div class="lv-btns"><span>−0,1</span><span>+0,1</span><span>Provspela</span><span class="w">Spara i Min samling</span></div></div><div class="lv-pane"><div class="lv-sh"><span class="lv-t" style="font-size:16px">Min samling</span><small>4 ljudklipp</small></div><div class="lv-row"><i><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#F2F4F7"/></svg></i><b>Favoritrefrängen</b><small>0:14 – 0:32</small></div><div class="lv-row"><i><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#F2F4F7"/></svg></i><b>Lugn start</b><small>0:00 – 0:25</small></div><div class="lv-row"><i><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#F2F4F7"/></svg></i><b>Morgonlåten</b><small>0:31 – 0:51</small></div><div class="lv-row"><i><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#F2F4F7"/></svg></i><b>Sista ackordet</b><small>2:41 – 2:56</small></div></div></div>
     </div>
     <div class="phone side" data-speed="0.12">
       <div class="island"></div>
       <div class="ph-h">Molla</div><div class="ph-s">Projekt</div>
-      <div class="row">Livok <small>Beta</small></div>
+      <div class="row">Livok <small>Live</small></div>
       <div class="row">PlejT:H:M <small>Bygger</small></div>
       <div class="row">Låt #2 <small>Mixas</small></div>
       <div class="row">3D-shop <small>Planeras</small></div>
@@ -198,16 +231,16 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
 <section class="wrap sec" id="appar">
   <div class="reveal">
     <div class="label mono">01 / Appar</div>
-    <h2>Två appar, byggda för att användas varje dag.</h2>
-    <p class="lead">Från idé till färdig produkt med AI som byggpartner. Båda är i aktiv utveckling.</p>
+    <h2>Två appar, byggda för att användas på riktigt.</h2>
+    <p class="lead">Från idé till färdig produkt med AI som byggpartner. Livok är ute, PlejT är på väg.</p>
   </div>
   <div class="grid g2">
     <article class="card reveal">
-      <span class="pill"><i></i>Under utveckling</span>
+      <span class="pill live"><i></i>Ute nu · livok.se</span>
       <h3>Livok</h3>
-      <p>Kort beskrivning av Livok: vad den löser och vem den är till för. Riktig text kommer här.</p>
-      <a class="more" href="#kontakt">Få besked vid lansering →</a>
-      <div class="app-vis"><div class="phone"><div class="island"></div><div class="ph-h">Livok</div><div class="ph-s">Idag</div><div class="ring"><span>72%</span></div><div class="row">Fokus <small>2 kvar</small></div></div></div>
+      <p>Rätt musik i rätt ögonblick. Förbered egna ljudklipp från Spotify med exakt start och slut, samla dem i ett personligt bibliotek och spela dem direkt från iPad eller dator.</p>
+      <a class="more" href="https://livok.se">Besök livok.se →</a>
+      <div class="app-vis livok"><div class="lv-pane"><div class="lv-sh"><span class="lv-t" style="font-size:16px">Min samling</span><small>4 ljudklipp</small></div><div class="lv-row"><i><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#F2F4F7"/></svg></i><b>Favoritrefrängen</b><small>0:14 – 0:32</small></div><div class="lv-row"><i><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#F2F4F7"/></svg></i><b>Lugn start</b><small>0:00 – 0:25</small></div><div class="lv-row"><i><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#F2F4F7"/></svg></i><b>Morgonlåten</b><small>0:31 – 0:51</small></div><div class="lv-row"><i><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#F2F4F7"/></svg></i><b>Sista ackordet</b><small>2:41 – 2:56</small></div></div></div>
     </article>
     <article class="card reveal">
       <span class="pill"><i style="background:var(--accent2)"></i>Under utveckling</span>
@@ -230,7 +263,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
       <h3>Andra låten är på väg</h3>
       <div class="wave" id="wave" aria-hidden="true"></div>
       <p>Första låten finns redan ute. Följ på Spotify så hör du nästa när den släpps.</p>
-      <a class="more" href="#">Lyssna på Spotify →</a>
+      <a class="more" href="https://open.spotify.com/artist/0AingqsHHNdQrDKM1EdzZh">Lyssna på Spotify →</a>
     </article>
     <article class="card reveal">
       <span class="pill"><i></i>3D-printing</span>
@@ -266,7 +299,7 @@ for(let k=0;k<48;k++){const s=document.createElement('span');s.style.animationDe
 // Nav
 const nav=document.getElementById('nav');
 const onScroll=()=>{nav.classList.toggle('scrolled',scrollY>20);
-  document.querySelectorAll('#show .phone').forEach(p=>{const r=p.parentElement.getBoundingClientRect();p.style.transform=`translateY(${60-Math.max(0,innerHeight-r.top)*p.dataset.speed}px)`})};
+  document.querySelectorAll('#show .phone, #show .tablet').forEach(p=>{const r=p.parentElement.getBoundingClientRect();p.style.transform=`translateY(${60-Math.max(0,innerHeight-r.top)*p.dataset.speed}px)`})};
 addEventListener('scroll',onScroll,{passive:true});onScroll();
 // Reveal
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
