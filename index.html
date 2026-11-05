@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Molla – digitala produkter, musik och 3D</title>
-<meta name="description" content="Molla bygger appar och digitala verktyg. Här samlas Livok, PlejT:H:M, musik och 3D-printing.">
+<meta name="description" content="Molla bygger appar och digitala verktyg. Här samlas Livok, Plej T:M:S, musik och 3D-printing.">
 <meta name="theme-color" content="#08090c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Martian+Mono:wght@500;800&family=Space+Grotesk:wght@600;700&family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#08090c; --bg2:#0d0f14; --card:#111318; --card2:#161921; --line:#ffffff12; --line2:#ffffff22;
@@ -108,6 +108,27 @@ nav ul a{transition:color .2s}nav ul a:hover{color:var(--text)}
 .card:hover .app-vis.livok .lv-pane{transform:none}
 .pill.live i{background:#FF6B2C}
 
+
+/* Plej T:M:S (riktig app-stil) */
+.pj{font-family:Archivo,Inter,sans-serif;color:#eef2f5}
+.pj-pane{background:#14181d;border:1px solid #2b323a;border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:12px;height:100%;
+  border-radius:14px 14px 0 0;border-bottom:0;transform:translateY(20px);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.card:hover .pj-pane{transform:none}
+.pj-brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:14px}
+.pj-brand small{display:block;color:#a7b0b8;font-weight:500;font-size:11px}
+.pj-sym{width:30px;height:30px;border-radius:6px;background:#eef2f5;color:#0b0d10;display:grid;place-items:center;font:800 13px "Martian Mono",monospace}
+.pj-sym span,.pj-red{color:#ff4a3a}
+.pj-k{font:500 10px "Martian Mono",monospace;letter-spacing:.08em;color:#a7b0b8;text-transform:uppercase}
+.pj-tl{position:relative;height:30px;border-bottom:1px solid #6c7782;margin:4px 0 2px;background:repeating-linear-gradient(90deg,#2b323a 0 1px,transparent 1px 10%)}
+.pj-tl i{position:absolute;bottom:-6px;width:11px;height:11px;border-radius:50%;background:#ff4a3a;box-shadow:0 0 0 3px #14181d;animation:pjpop 4s ease-in-out infinite}
+@keyframes pjpop{0%,100%{transform:scale(1)}50%{transform:scale(1.25)}}
+.pj-row{display:grid;grid-template-columns:62px 1fr auto;gap:10px;align-items:center;border-top:1px solid #2b323a;padding-top:9px;font-size:13px}
+.pj-row code{font:500 12px "Martian Mono",monospace;color:#eef2f5}
+.pj-row small{font-size:11px;color:#a7b0b8;border:1px solid #6c7782;border-radius:99px;padding:2px 8px}
+.app-vis.plej{background:radial-gradient(ellipse 80% 90% at 50% 120%,#ff4a3a2a,transparent 70%),var(--bg2);padding:34px 34px 0}
+.pill.plej i{background:#ff4a3a}
+.phone.pjp{background:#0b0d10}
+
 /* Logos/marquee */
 .ticker{border-block:1px solid var(--line);overflow:hidden;padding:22px 0;color:var(--dim)}
 .track{display:flex;gap:64px;width:max-content;animation:scroll 40s linear infinite;white-space:nowrap}
@@ -188,7 +209,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
 </div></nav>
 
 <header class="wrap hero">
-  <span class="status mono"><b></b>Livok är ute · PlejT på väg</span>
+  <span class="status mono"><b></b>Livok är ute · Plej T:M:S på väg</span>
   <h1 id="h1">Jag bygger digitala verktyg <em>som gör vardagen enklare.</em></h1>
   <div class="hero-foot">
     <p>Molla är hemmet för mina appar, min musik och mina 3D-projekt. Allt byggs från idé till färdig produkt, ett projekt i taget.</p>
@@ -198,12 +219,12 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
     </div>
   </div>
   <div class="showcase reveal" id="show">
-    <div class="phone side" data-speed="0.12">
+    <div class="phone side pjp pj" data-speed="0.12">
       <div class="island"></div>
-      <div class="ph-h">PlejT:H:M</div><div class="ph-s">Översikt</div>
-      <div class="row">Idag <small>3 aktiviteter</small></div>
-      <div class="row">Vecka <small>12 / 15</small></div>
-      <div class="row" style="display:block">Framsteg<div class="bar"><i style="width:80%;background:var(--accent2)"></i></div></div>
+      <div class="pj-brand" style="margin-bottom:16px"><span class="pj-sym">P<span>:</span></span><span>Plej T:M:S<small>Situationer</small></span></div>
+      <div class="pj-tl"><i style="left:7%"></i><i style="left:19%;animation-delay:-1s"></i><i style="left:38%;animation-delay:-2s"></i><i style="left:69%;animation-delay:-3s"></i></div>
+      <div style="height:10px"></div>
+      <div class="pj-row"><code>00:04:12</code><span>Powerplay</span><small style="display:none">Anfall</small></div><div class="pj-row"><code>00:11:37</code><span>Uppspel</span><small style="display:none">Omställning</small></div><div class="pj-row"><code>00:23:05</code><span>Boxplay</span><small style="display:none">Försvar</small></div>
     </div>
     <div class="tablet" data-speed="0.05" aria-label="Livok på iPad">
       <div class="lv-bar"><svg class="lv-logo" viewBox="-24 -4 1052 248" role="img" aria-label="LIVOK"><path d="M0 20H52V168H150V220H0Z M182 86H234V220H182Z M288 20H354L396 150L438 20H504L430 220H362Z M790 20H842V220H790Z M836 132L926 20H1000L872 172Z M880 118L1004 220H928L842 152Z" fill="#F2F4F7"/><path d="M628 20H658A100 100 0 0 1 658 220H628A100 100 0 0 1 628 20Z M628 72H658A48 48 0 0 1 658 168H628A48 48 0 0 1 628 72Z" fill="#F2F4F7" fill-rule="evenodd"/><path d="M160 20H256L208 66Z" fill="#FF6B2C"/></svg><span class="lv-open">Öppna appen</span></div>
@@ -216,7 +237,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
       <div class="island"></div>
       <div class="ph-h">Molla</div><div class="ph-s">Projekt</div>
       <div class="row">Livok <small>Live</small></div>
-      <div class="row">PlejT:H:M <small>Bygger</small></div>
+      <div class="row">Plej T:M:S <small>Bygger</small></div>
       <div class="row">Låt #2 <small>Mixas</small></div>
       <div class="row">3D-shop <small>Planeras</small></div>
     </div>
@@ -232,7 +253,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
   <div class="reveal">
     <div class="label mono">01 / Appar</div>
     <h2>Två appar, byggda för att användas på riktigt.</h2>
-    <p class="lead">Från idé till färdig produkt med AI som byggpartner. Livok är ute, PlejT är på väg.</p>
+    <p class="lead">Från idé till färdig produkt med AI som byggpartner. Livok är ute, Plej T:M:S är på väg.</p>
   </div>
   <div class="grid g2">
     <article class="card reveal">
@@ -243,11 +264,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
       <div class="app-vis livok"><div class="lv-pane"><div class="lv-sh"><span class="lv-t" style="font-size:16px">Min samling</span><small>4 ljudklipp</small></div><div class="lv-row"><i><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#F2F4F7"/></svg></i><b>Favoritrefrängen</b><small>0:14 – 0:32</small></div><div class="lv-row"><i><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#F2F4F7"/></svg></i><b>Lugn start</b><small>0:00 – 0:25</small></div><div class="lv-row"><i><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#F2F4F7"/></svg></i><b>Morgonlåten</b><small>0:31 – 0:51</small></div><div class="lv-row"><i><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#F2F4F7"/></svg></i><b>Sista ackordet</b><small>2:41 – 2:56</small></div></div></div>
     </article>
     <article class="card reveal">
-      <span class="pill"><i style="background:var(--accent2)"></i>Under utveckling</span>
-      <h3>PlejT:H:M</h3>
-      <p>Kort beskrivning av PlejT:H:M: vad den gör och varför. Riktig text kommer här.</p>
+      <span class="pill plej"><i></i>Under utveckling</span>
+      <h3>Plej T:M:S</h3>
+      <p>Videoanalys för hockeytränare. Markera situationer i matcher från svensk hockey-tv med exakt tid och kommentar, och visa dem för laget i ett presentationsläge vid videogenomgången.</p>
       <a class="more" href="#kontakt">Få besked vid lansering →</a>
-      <div class="app-vis blue"><div class="phone"><div class="island"></div><div class="ph-h">PlejT:H:M</div><div class="ph-s">Översikt</div><div class="row">Idag <small>3</small></div><div class="row" style="display:block">Framsteg<div class="bar"><i style="width:80%;background:var(--accent2)"></i></div></div></div></div>
+      <div class="app-vis plej"><div class="pj-pane pj"><div class="pj-brand"><span class="pj-sym">P<span>:</span></span><span>Plej T:M:S<small>Tränarstudio</small></span></div><span class="pj-k">Match · Situationer</span><div class="pj-tl"><i style="left:7%"></i><i style="left:19%;animation-delay:-1s"></i><i style="left:38%;animation-delay:-2s"></i><i style="left:69%;animation-delay:-3s"></i></div><div class="pj-row"><code>00:04:12</code><span>Powerplay</span><small>Anfall</small></div><div class="pj-row"><code>00:11:37</code><span>Uppspel</span><small>Omställning</small></div><div class="pj-row"><code>00:23:05</code><span>Boxplay</span><small>Försvar</small></div><div class="pj-row"><code>00:41:50</code><span>Mål 2–1</span><small>Anfall</small></div></div></div>
     </article>
   </div>
 </section>
