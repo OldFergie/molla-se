@@ -23,7 +23,7 @@
 :root{
   --bg:#08090c; --bg2:#0d0f14; --card:#111318; --card2:#161921; --line:#ffffff12; --line2:#ffffff22;
   --text:#eef0f4; --muted:#8b91a0; --dim:#5b6070;
-  --accent:#6ee7c8; --accent2:#3b82f6;
+  --accent:#ff6b2c; --accent2:#3b82f6;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -39,7 +39,7 @@ section,header,footer{position:relative;z-index:1}
   background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
   background-size:72px 72px;mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 30%,transparent 75%)}
 .bg-light{position:absolute;top:-25vh;left:50%;width:1100px;height:800px;transform:translateX(-50%);z-index:0;pointer-events:none;
-  background:radial-gradient(ellipse at center,#6ee7c81f,transparent 60%);animation:breathe 10s ease-in-out infinite}
+  background:radial-gradient(ellipse at center,#ff6b2c1f,transparent 60%);animation:breathe 10s ease-in-out infinite}
 @keyframes breathe{50%{opacity:.55;transform:translateX(-50%) scale(1.08)}}
 
 /* Nav */
@@ -60,8 +60,8 @@ nav ul a{transition:color .2s}nav ul a:hover{color:var(--text)}
 /* Hero */
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:150px 0 80px}
 .status{display:inline-flex;gap:10px;align-items:center;color:var(--muted);border:1px solid var(--line);background:#ffffff05;padding:8px 14px;border-radius:999px;margin-bottom:34px;width:max-content;max-width:100%;font-size:11px}
-.status b{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 #6ee7c880;animation:ping 2.4s infinite}
-@keyframes ping{70%{box-shadow:0 0 0 8px #6ee7c800}100%{box-shadow:0 0 0 0 #6ee7c800}}
+.status b{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 #ff6b2c80;animation:ping 2.4s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 8px #ff6b2c00}100%{box-shadow:0 0 0 0 #ff6b2c00}}
 .hero h1{font-size:clamp(46px,7.6vw,112px);max-width:1050px}
 .hero h1 em{font-style:normal;color:var(--muted)}
 .hero h1 .w{display:inline-block;opacity:0;transform:translateY(28px);filter:blur(6px);animation:up .9s cubic-bezier(.2,.8,.2,1) forwards}
@@ -73,7 +73,7 @@ nav ul a{transition:color .2s}nav ul a:hover{color:var(--text)}
 /* Showcase */
 .showcase{position:relative;margin-top:30px;border-radius:24px;border:1px solid var(--line);background:linear-gradient(180deg,var(--card),var(--bg2));
   height:560px;overflow:hidden;display:flex;justify-content:center;align-items:flex-end;gap:28px;padding:60px 24px 0}
-.showcase::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 50% 110%,#6ee7c833,transparent 70%)}
+.showcase::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 50% 110%,#ff6b2c33,transparent 70%)}
 .phone{position:relative;width:260px;height:530px;border-radius:44px;background:#0a0b0f;border:1px solid #ffffff1f;
   box-shadow:0 0 0 7px #15171d,0 50px 100px #000c;padding:26px 18px;transform:translateY(60px);will-change:transform}
 .phone .island{width:84px;height:24px;border-radius:999px;background:#000;margin:0 auto 26px;border:1px solid #ffffff10}
@@ -88,6 +88,7 @@ nav ul a{transition:color .2s}nav ul a:hover{color:var(--text)}
 
 
 /* Livok (riktig app-stil) */
+.tablet,.phone,.app-vis{user-select:none;pointer-events:none}
 .tablet{position:relative;flex:0 1 640px;min-width:0;height:470px;border-radius:30px;background:#121418;border:1px solid #ffffff1f;box-shadow:0 0 0 8px #15171d,0 50px 100px #000c;
   padding:16px;transform:translateY(60px);will-change:transform;display:flex;flex-direction:column;gap:12px;font-family:Inter,sans-serif;color:#F2F4F7}
 .lv-bar{display:flex;justify-content:space-between;align-items:center;padding:4px 6px}
@@ -105,14 +106,15 @@ nav ul a{transition:color .2s}nav ul a:hover{color:var(--text)}
 .lv-end{position:absolute;left:71%;top:-7px;width:2px;height:30px;background:#A0A7B2}
 @keyframes playhead{0%{left:31%}100%{left:71%}}
 @keyframes sel{50%{opacity:.45}}
+.lv-meta{display:flex;justify-content:space-between;font-size:11px;color:#A0A7B2;margin-top:auto;font-variant-numeric:tabular-nums}
 .lv-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
 .lv-btns span{font-size:11px;font-weight:700;border:1px solid #3B424D;border-radius:8px;padding:8px 10px}
 .lv-btns .w{background:#F2F4F7;color:#0A0B0D;border-color:#F2F4F7;margin-left:auto}
 .lv-sh{display:flex;justify-content:space-between;align-items:baseline}.lv-sh small,.lv-row small{font-size:11px;color:#A0A7B2;white-space:nowrap}
 .lv-row{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;border-top:1px solid #1F232A;padding-top:9px;font-size:13px}
 .lv-row b{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.lv-row i{width:30px;height:30px;border-radius:50%;border:1px solid #3B424D;display:grid;place-items:center}.lv-row i svg{width:12px;height:12px}
-.lv-row:nth-of-type(2) i{border-color:#FF6B2C;background:#FF6B2C22}
+.lv-row i{font:500 11px "JetBrains Mono",monospace;font-style:normal;color:#5b6070}
+.lv-row:nth-of-type(2) b{color:#FF6B2C}
 .app-vis.livok{background:radial-gradient(ellipse 80% 90% at 50% 120%,#FF6B2C2e,transparent 70%),var(--bg2);padding:34px 34px 0}
 .app-vis.livok .lv-pane{height:100%;border-radius:14px 14px 0 0;border-bottom:0;transform:translateY(20px);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
 .card:hover .app-vis.livok .lv-pane{transform:none}
@@ -134,7 +136,7 @@ nav ul a{transition:color .2s}nav ul a:hover{color:var(--text)}
 @keyframes pjpop{0%,100%{transform:scale(1)}50%{transform:scale(1.25)}}
 .pj-row{display:grid;grid-template-columns:62px 1fr auto;gap:10px;align-items:center;border-top:1px solid #2b323a;padding-top:9px;font-size:13px}
 .pj-row code{font:500 12px "Martian Mono",monospace;color:#eef2f5}
-.pj-row small{font-size:11px;color:#a7b0b8;border:1px solid #6c7782;border-radius:99px;padding:2px 8px}
+.pj-row small{font-size:11px;color:#a7b0b8}
 .app-vis.plej{background:radial-gradient(ellipse 80% 90% at 50% 120%,#ff4a3a2a,transparent 70%),var(--bg2);padding:34px 34px 0}
 .pill.plej i{background:#ff4a3a}
 .phone.pjp{background:#0b0d10}
@@ -163,7 +165,7 @@ nav ul a{transition:color .2s}nav ul a:hover{color:var(--text)}
 .pill{display:inline-flex;gap:8px;align-items:center;font-size:12px;font-weight:500;padding:6px 12px;border-radius:999px;border:1px solid var(--line2);color:var(--muted)}
 .pill i{width:6px;height:6px;border-radius:50%;background:var(--accent)}
 .app-vis{height:320px;margin:34px -34px -34px;border-top:1px solid var(--line);position:relative;overflow:hidden;
-  background:radial-gradient(ellipse 80% 90% at 50% 120%,#6ee7c826,transparent 70%),var(--bg2)}
+  background:radial-gradient(ellipse 80% 90% at 50% 120%,#ff6b2c26,transparent 70%),var(--bg2)}
 .app-vis.blue{background:radial-gradient(ellipse 80% 90% at 50% 120%,#3b82f633,transparent 70%),var(--bg2)}
 .app-vis .phone{position:absolute;left:50%;top:50px;width:220px;height:440px;transform:translateX(-50%);transition:top .6s cubic-bezier(.2,.8,.2,1);padding:22px 15px}
 .card:hover .app-vis .phone{top:30px}
@@ -173,11 +175,11 @@ nav ul a{transition:color .2s}nav ul a:hover{color:var(--text)}
 /* Split */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:64px}
 .wave{display:flex;gap:4px;align-items:center;height:80px;margin:30px 0}
-.wave span{flex:1;height:100%;border-radius:3px;background:linear-gradient(var(--accent),#6ee7c844);animation:wv 1.6s ease-in-out infinite}
+.wave span{flex:1;height:100%;border-radius:3px;background:linear-gradient(var(--accent),#ff6b2c44);animation:wv 1.6s ease-in-out infinite}
 @keyframes wv{0%,100%{transform:scaleY(.25)}50%{transform:scaleY(1)}}
 .layers{height:100%;min-height:300px;display:grid;place-items:center;perspective:800px}
 .stack{position:relative;width:200px;height:200px;transform:rotateX(58deg) rotateZ(-40deg);transform-style:preserve-3d}
-.stack i{position:absolute;inset:0;border:1px solid #6ee7c866;border-radius:16px;background:#6ee7c808;animation:lift 4s ease-in-out infinite}
+.stack i{position:absolute;inset:0;border:1px solid #ff6b2c66;border-radius:16px;background:#ff6b2c08;animation:lift 4s ease-in-out infinite}
 @keyframes lift{0%,100%{transform:translateZ(calc(var(--n)*6px))}50%{transform:translateZ(calc(var(--n)*16px))}}
 
 /* Kontakt */
@@ -236,11 +238,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
       <div class="pj-row"><code>00:04:12</code><span>Powerplay</span><small style="display:none">Anfall</small></div><div class="pj-row"><code>00:11:37</code><span>Uppspel</span><small style="display:none">Omställning</small></div><div class="pj-row"><code>00:23:05</code><span>Boxplay</span><small style="display:none">Försvar</small></div>
     </div>
     <div class="tablet" data-speed="0.05" aria-label="Livok på iPad">
-      <div class="lv-bar"><svg class="lv-logo" viewBox="-24 -4 1052 248" role="img" aria-label="LIVOK"><path d="M0 20H52V168H150V220H0Z M182 86H234V220H182Z M288 20H354L396 150L438 20H504L430 220H362Z M790 20H842V220H790Z M836 132L926 20H1000L872 172Z M880 118L1004 220H928L842 152Z" fill="#F2F4F7"/><path d="M628 20H658A100 100 0 0 1 658 220H628A100 100 0 0 1 628 20Z M628 72H658A48 48 0 0 1 658 168H628A48 48 0 0 1 628 72Z" fill="#F2F4F7" fill-rule="evenodd"/><path d="M160 20H256L208 66Z" fill="#FF6B2C"/></svg><span class="lv-open">Öppna appen</span></div>
+      <div class="lv-bar"><svg class="lv-logo" viewBox="-24 -4 1052 248" role="img" aria-label="LIVOK"><path d="M0 20H52V168H150V220H0Z M182 86H234V220H182Z M288 20H354L396 150L438 20H504L430 220H362Z M790 20H842V220H790Z M836 132L926 20H1000L872 172Z M880 118L1004 220H928L842 152Z" fill="#F2F4F7"/><path d="M628 20H658A100 100 0 0 1 658 220H628A100 100 0 0 1 628 20Z M628 72H658A48 48 0 0 1 658 168H628A48 48 0 0 1 628 72Z" fill="#F2F4F7" fill-rule="evenodd"/><path d="M160 20H256L208 66Z" fill="#FF6B2C"/></svg><span class="lv-k">Bild av appen</span></div>
       <div class="lv-grid"><div class="lv-pane"><span class="lv-k">Nytt ljudklipp</span><span class="lv-t">Favoritrefrängen</span>
 <div class="lv-se"><span>START 0:14.0</span><span>SLUT 0:32.0</span></div>
 <div class="lv-tl"><div class="lv-sel"></div><div class="lv-head"></div><div class="lv-tri"></div><div class="lv-end"></div></div>
-<div class="lv-btns"><span>−0,1</span><span>+0,1</span><span>Provspela</span><span class="w">Spara i Min samling</span></div></div><div class="lv-pane"><div class="lv-sh"><span class="lv-t" style="font-size:16px">Min samling</span><small>4 ljudklipp</small></div><div class="lv-row"><i><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#F2F4F7"/></svg></i><b>Favoritrefrängen</b><small>0:14 – 0:32</small></div><div class="lv-row"><i><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#F2F4F7"/></svg></i><b>Lugn start</b><small>0:00 – 0:25</small></div><div class="lv-row"><i><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#F2F4F7"/></svg></i><b>Morgonlåten</b><small>0:31 – 0:51</small></div><div class="lv-row"><i><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#F2F4F7"/></svg></i><b>Sista ackordet</b><small>2:41 – 2:56</small></div></div></div>
+<div class="lv-meta"><span>0:00</span><span>Längd 18,0 s</span><span>0:45</span></div></div><div class="lv-pane"><div class="lv-sh"><span class="lv-t" style="font-size:16px">Min samling</span><small>4 ljudklipp</small></div><div class="lv-row"><i>01</i><b>Favoritrefrängen</b><small>0:14 – 0:32</small></div><div class="lv-row"><i>02</i><b>Lugn start</b><small>0:00 – 0:25</small></div><div class="lv-row"><i>03</i><b>Morgonlåten</b><small>0:31 – 0:51</small></div><div class="lv-row"><i>04</i><b>Sista ackordet</b><small>2:41 – 2:56</small></div></div></div>
     </div>
     <div class="phone side" data-speed="0.12">
       <div class="island"></div>
@@ -270,7 +272,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
       <h3>Livok</h3>
       <p>Rätt musik i rätt ögonblick. Förbered egna ljudklipp från Spotify med exakt start och slut, samla dem i ett personligt bibliotek och spela dem direkt från iPad eller dator.</p>
       <a class="more" href="https://livok.se">Besök livok.se →</a>
-      <div class="app-vis livok"><div class="lv-pane"><div class="lv-sh"><span class="lv-t" style="font-size:16px">Min samling</span><small>4 ljudklipp</small></div><div class="lv-row"><i><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#F2F4F7"/></svg></i><b>Favoritrefrängen</b><small>0:14 – 0:32</small></div><div class="lv-row"><i><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#F2F4F7"/></svg></i><b>Lugn start</b><small>0:00 – 0:25</small></div><div class="lv-row"><i><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#F2F4F7"/></svg></i><b>Morgonlåten</b><small>0:31 – 0:51</small></div><div class="lv-row"><i><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#F2F4F7"/></svg></i><b>Sista ackordet</b><small>2:41 – 2:56</small></div></div></div>
+      <div class="app-vis livok"><div class="lv-pane"><div class="lv-sh"><span class="lv-t" style="font-size:16px">Min samling</span><small>4 ljudklipp</small></div><div class="lv-row"><i>01</i><b>Favoritrefrängen</b><small>0:14 – 0:32</small></div><div class="lv-row"><i>02</i><b>Lugn start</b><small>0:00 – 0:25</small></div><div class="lv-row"><i>03</i><b>Morgonlåten</b><small>0:31 – 0:51</small></div><div class="lv-row"><i>04</i><b>Sista ackordet</b><small>2:41 – 2:56</small></div></div></div>
     </article>
     <article class="card reveal">
       <span class="pill plej"><i></i>Under utveckling</span>
