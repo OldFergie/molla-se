@@ -189,6 +189,22 @@ nav ul a{transition:color .2s}nav ul a:hover{color:var(--text)}
 .contact{padding:170px 0 120px;text-align:center}
 .contact h2{font-size:clamp(44px,7vw,104px);margin:0 auto}
 .contact .lead{margin:26px auto 40px}
+.cform{max-width:680px;margin:0 auto;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.cform label{display:flex;flex-direction:column;gap:8px;font-size:14px;font-weight:500;color:var(--muted)}
+.cform .full{grid-column:1/-1}
+.cform input,.cform select,.cform textarea{font:inherit;font-size:16px;color:var(--text);background:var(--bg2);border:1px solid var(--line2);border-radius:10px;padding:13px 14px;width:100%;transition:border-color .2s}
+.cform textarea{min-height:150px;resize:vertical}
+.cform select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);background-position:calc(100% - 20px) 55%,calc(100% - 15px) 55%;background-size:5px 5px;background-repeat:no-repeat}
+.cform input:focus,.cform select:focus,.cform textarea:focus{outline:none;border-color:var(--accent)}
+.cform .hp{position:absolute;left:-9999px}
+.cform .foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.cform .foot small{color:var(--dim);font-size:13px;max-width:360px}
+.cform button{border:0;cursor:pointer;font:inherit}
+.cform button[disabled]{opacity:.6;cursor:wait}
+.cstatus{grid-column:1/-1;font-size:15px;display:none;padding:12px 14px;border-radius:10px}
+.cstatus.ok{display:block;background:#ff6b2c14;border:1px solid #ff6b2c55;color:var(--text)}
+.cstatus.err{display:block;background:#ff4a3a14;border:1px solid #ff4a3a55;color:var(--text)}
+@media (max-width:700px){.cform{grid-template-columns:1fr;padding:24px}}
 footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--dim);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
 
@@ -317,8 +333,26 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
   <div class="reveal">
     <div class="label mono" style="justify-content:center">Kontakt</div>
     <h2>Låt oss bygga<br>något tillsammans.</h2>
-    <p class="lead">Frågor om apparna, musiken eller samarbeten. Jag svarar så snart jag kan.</p>
-    <a href="mailto:hej@molla.se" class="btn primary">hej@molla.se <span class="arr">→</span></a>
+    <p class="lead">Frågor om apparna, musiken eller samarbeten? Skriv några rader så svarar jag så snart jag kan.</p>
+    <form class="cform" id="cform" novalidate>
+      <input type="hidden" name="access_key" value="51395e67-98b3-4453-b843-9fb4ad2f8e22">
+      <input type="hidden" name="subject" value="Nytt meddelande från molla.se">
+      <input type="hidden" name="from_name" value="molla.se">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label>Namn<input name="name" autocomplete="name" required maxlength="100"></label>
+      <label>E-post<input name="email" type="email" autocomplete="email" required maxlength="200"></label>
+      <label class="full">Det gäller
+        <select name="topic">
+          <option>Livok</option><option>Plej T:M:S</option><option>Musik</option><option>3D-printing</option><option selected>Annat</option>
+        </select>
+      </label>
+      <label class="full">Meddelande<textarea name="message" required maxlength="5000"></textarea></label>
+      <div class="cstatus" id="cstatus" role="status" aria-live="polite"></div>
+      <div class="foot full">
+        <small>Dina uppgifter används bara för att svara dig.</small>
+        <button type="submit" class="btn primary" id="csend">Skicka meddelande <span class="arr">→</span></button>
+      </div>
+    </form>
   </div>
 </section>
 
@@ -347,6 +381,18 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
 document.querySelectorAll('.reveal').forEach((el,k)=>{el.style.transitionDelay=(k%2)*120+'ms';io.observe(el)});
 // Ljus som följer musen i korten
 document.querySelectorAll('.card').forEach(c=>c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',e.clientX-r.left+'px');c.style.setProperty('--my',e.clientY-r.top+'px')}));
+// Kontaktformulär
+const cf=document.getElementById('cform'),cs=document.getElementById('cstatus'),cb=document.getElementById('csend');
+const say=(t,ok)=>{cs.textContent=t;cs.className='cstatus '+(ok?'ok':'err')};
+cf.addEventListener('submit',async e=>{e.preventDefault();
+  if(!cf.checkValidity()){say('Fyll i namn, en giltig e-postadress och ett meddelande.',false);cf.reportValidity();return}
+  cb.disabled=true;cb.firstChild.textContent='Skickar… ';
+  try{const r=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(cf)});
+    const d=await r.json();if(!r.ok||!d.success)throw 0;
+    cf.reset();say('Tack! Meddelandet är skickat. Jag hör av mig så snart jag kan.',true)}
+  catch{say('Något gick fel och meddelandet skickades inte. Försök igen om en stund.',false)}
+  finally{cb.disabled=false;cb.firstChild.textContent='Skicka meddelande '}
+});
 </script>
 </body>
 </html>
