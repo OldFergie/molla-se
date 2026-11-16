@@ -1,0 +1,111 @@
+# Inställningar för adminpanelen på molla.se/admin
+# Allt som sparas hamnar i content/sida.json i GitHub-repot,
+# och sidan publiceras om automatiskt efter ungefär en minut.
+
+backend:
+  name: github
+  repo: OldFergie/molla-se
+  branch: main
+  commit_messages:
+    update: "Uppdatera {{slug}} via adminpanelen"
+    uploadMedia: "Ladda upp {{path}} via adminpanelen"
+    deleteMedia: "Ta bort {{path}} via adminpanelen"
+
+site_url: https://molla.se
+display_url: https://molla.se
+
+media_folder: assets/uploads
+public_folder: /assets/uploads
+
+collections:
+  - name: sidan
+    label: Sidan
+    description: Texter och bilder på molla.se
+    editor:
+      preview: false
+    files:
+      - name: startsidan
+        label: Startsidan
+        file: content/sida.json
+        format: json
+        fields:
+          - label: Fliken och delning
+            name: seo
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Sidans titel (syns i webbläsarfliken), name: titel, widget: string }
+              - { label: Beskrivning för Google, name: beskrivning, widget: text }
+              - { label: Text när sidan delas, name: delningstext, widget: text }
+              - { label: Bild när sidan delas (1200 × 630 px), name: delningsbild, widget: image }
+
+          - label: Toppen
+            name: topp
+            widget: object
+            fields:
+              - { label: Statusrad överst, name: status, widget: string }
+              - { label: Stor rubrik (vit del), name: rubrik, widget: string }
+              - { label: Stor rubrik (grå del), name: rubrik_gra, widget: string }
+              - { label: Ingress, name: ingress, widget: text }
+
+          - label: Apparna – rubrik
+            name: appar
+            widget: object
+            fields:
+              - { label: Rubrik, name: rubrik, widget: string }
+              - { label: Ingress, name: ingress, widget: text }
+
+          - label: Livok
+            name: livok
+            widget: object
+            fields:
+              - { label: Status (liten etikett), name: status, widget: string }
+              - { label: Namn, name: namn, widget: string }
+              - { label: Text, name: text, widget: text }
+              - { label: Länktext, name: lanktext, widget: string }
+              - { label: Länk (webbadress), name: lank, widget: string }
+              - { label: Bild (valfri – ersätter illustrationen), name: bild, widget: image, required: false }
+
+          - label: Plej T:M:S
+            name: plej
+            widget: object
+            fields:
+              - { label: Status (liten etikett), name: status, widget: string }
+              - { label: Namn, name: namn, widget: string }
+              - { label: Text, name: text, widget: text }
+              - { label: Länktext, name: lanktext, widget: string }
+              - { label: Länk (webbadress), name: lank, widget: string }
+              - { label: Bild (valfri – ersätter illustrationen), name: bild, widget: image, required: false }
+
+          - label: Musik och 3D – rubrik
+            name: skapande
+            widget: object
+            fields:
+              - { label: Rubrik, name: rubrik, widget: string }
+
+          - label: Musik
+            name: musik
+            widget: object
+            fields:
+              - { label: Etikett, name: etikett, widget: string }
+              - { label: Rubrik, name: rubrik, widget: string }
+              - { label: Text, name: text, widget: text }
+              - { label: Länktext, name: lanktext, widget: string }
+              - { label: Länk (webbadress), name: lank, widget: string }
+              - { label: Bild (valfri – ersätter vågformen), name: bild, widget: image, required: false }
+
+          - label: 3D-printing
+            name: tredje
+            widget: object
+            fields:
+              - { label: Etikett, name: etikett, widget: string }
+              - { label: Rubrik, name: rubrik, widget: string }
+              - { label: Text, name: text, widget: text }
+              - { label: Bild (valfri – ersätter lagren), name: bild, widget: image, required: false }
+
+          - label: Kontakt
+            name: kontakt
+            widget: object
+            fields:
+              - { label: Rubrik (ny rad = radbrytning), name: rubrik, widget: text }
+              - { label: Ingress, name: ingress, widget: text }
