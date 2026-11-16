@@ -12,19 +12,19 @@
     "ingress": "Molla är hemmet för mina appar, min musik och mina 3D-projekt. Allt byggs från idé till färdig produkt, ett projekt i taget."
   },
   "appar": {
-    "rubrik": "Två appar, byggda för att användas på riktigt.",
+    "rubrik": "Två appar, byggs för att användas på riktigt.",
     "ingress": "Från idé till färdig produkt med AI som byggpartner. Båda lanseras snart."
   },
   "livok": {
     "status": "Lanseras snart",
     "namn": "Livok",
-    "text": "Rätt musik i rätt ögonblick. Förbered egna ljudklipp från Spotify med exakt start och slut, samla dem i ett personligt bibliotek och spela dem direkt från iPad eller dator.",
+    "text": "Rätt musik i rätt ögonblick. Förbered egna ljudklipp från Spotify eller Apple Music med exakt start och slut, samla dem i ett personligt bibliotek och spela dem direkt från iPad eller dator.",
     "lanktext": "Besök livok.se →",
     "lank": "https://livok.se",
     "bild": ""
   },
   "plej": {
-    "status": "Under utveckling",
+    "status": "Lanseras snart",
     "namn": "Plej T:M:S",
     "text": "Videoanalys för hockeytränare. Markera situationer i matcher från svensk hockey-tv med exakt tid och kommentar, och visa dem för laget i ett presentationsläge vid videogenomgången.",
     "lanktext": "Få besked vid lansering →",
