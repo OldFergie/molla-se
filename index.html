@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Molla – digitala produkter, musik och 3D</title>
-<meta name="description" content="Molla bygger appar och digitala verktyg. Här samlas Livok, Plej T:M:S, musik och 3D-printing.">
+<title data-cms="seo.titel">Molla – digitala produkter, musik och 3D</title>
+<meta name="description" data-cms-attr="content:seo.beskrivning" content="Molla bygger appar och digitala verktyg. Här samlas Livok, Plej T:M:S, musik och 3D-printing.">
 <link rel="icon" href="/favicon.ico?v=2" sizes="48x48">
 <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png?v=2" type="image/png" sizes="32x32">
@@ -14,9 +14,9 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="sv_SE">
 <meta property="og:url" content="https://molla.se/">
-<meta property="og:title" content="Molla – digitala produkter, musik och 3D">
-<meta property="og:description" content="Hemmet för appar som Livok och Plej T:M:S, musik och 3D-projekt.">
-<meta property="og:image" content="https://molla.se/assets/og.png">
+<meta property="og:title" data-cms-attr="content:seo.titel" content="Molla – digitala produkter, musik och 3D">
+<meta property="og:description" data-cms-attr="content:seo.delningstext" content="Hemmet för appar som Livok och Plej T:M:S, musik och 3D-projekt.">
+<meta property="og:image" data-cms-attr="content:seo.delningsbild|url" content="https://molla.se/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#08090c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -172,6 +172,9 @@ nav ul a{transition:color .2s}nav ul a:hover{color:var(--text)}
 .app-vis.blue{background:radial-gradient(ellipse 80% 90% at 50% 120%,#3b82f633,transparent 70%),var(--bg2)}
 .app-vis .phone{position:absolute;left:50%;top:50px;width:220px;height:440px;transform:translateX(-50%);transition:top .6s cubic-bezier(.2,.8,.2,1);padding:22px 15px}
 .card:hover .app-vis .phone{top:30px}
+.cms-bild img{width:100%;height:100%;object-fit:cover;display:block}
+.app-vis.cms-bild{padding:0}
+.card-bild{margin:30px 0;border-radius:14px;overflow:hidden;aspect-ratio:16/10;border:1px solid var(--line)}
 .more{display:inline-flex;gap:8px;margin-top:22px;font-weight:500;font-size:15px}
 .more:hover{color:var(--accent)}
 
@@ -243,10 +246,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
 </div></nav>
 
 <header class="wrap hero">
-  <span class="status mono"><b></b>Livok och Plej T:M:S på väg</span>
-  <h1 id="h1">Jag bygger digitala verktyg <em>som gör vardagen enklare.</em></h1>
+  <span class="status mono"><b></b><span data-cms="topp.status">Livok och Plej T:M:S på väg</span></span>
+  <h1 id="h1"><span data-cms="topp.rubrik">Jag bygger digitala verktyg</span> <em data-cms="topp.rubrik_gra">som gör vardagen enklare.</em></h1>
   <div class="hero-foot">
-    <p>Molla är hemmet för mina appar, min musik och mina 3D-projekt. Allt byggs från idé till färdig produkt, ett projekt i taget.</p>
+    <p data-cms="topp.ingress">Molla är hemmet för mina appar, min musik och mina 3D-projekt. Allt byggs från idé till färdig produkt, ett projekt i taget.</p>
     <div class="cta">
       <a href="#appar" class="btn primary">Se apparna <span class="arr">→</span></a>
       <a href="#kontakt" class="btn ghost">Hör av dig</a>
@@ -286,23 +289,23 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
 <section class="wrap sec" id="appar">
   <div class="reveal">
     <div class="label mono">01 / Appar</div>
-    <h2>Två appar, byggda för att användas på riktigt.</h2>
-    <p class="lead">Från idé till färdig produkt med AI som byggpartner. Båda lanseras snart.</p>
+    <h2 data-cms="appar.rubrik">Två appar, byggda för att användas på riktigt.</h2>
+    <p class="lead" data-cms="appar.ingress">Från idé till färdig produkt med AI som byggpartner. Båda lanseras snart.</p>
   </div>
   <div class="grid g2">
     <article class="card reveal">
-      <span class="pill live"><i></i>Lanseras snart</span>
-      <h3>Livok</h3>
-      <p>Rätt musik i rätt ögonblick. Förbered egna ljudklipp från Spotify med exakt start och slut, samla dem i ett personligt bibliotek och spela dem direkt från iPad eller dator.</p>
-      <a class="more" href="https://livok.se">Besök livok.se →</a>
-      <div class="app-vis livok"><div class="lv-pane"><div class="lv-sh"><span class="lv-t" style="font-size:16px">Min samling</span><small>4 ljudklipp</small></div><div class="lv-row"><i>01</i><b>Favoritrefrängen</b><small>0:14 – 0:32</small></div><div class="lv-row"><i>02</i><b>Lugn start</b><small>0:00 – 0:25</small></div><div class="lv-row"><i>03</i><b>Morgonlåten</b><small>0:31 – 0:51</small></div><div class="lv-row"><i>04</i><b>Sista ackordet</b><small>2:41 – 2:56</small></div></div></div>
+      <span class="pill live"><i></i><span data-cms="livok.status">Lanseras snart</span></span>
+      <h3 data-cms="livok.namn">Livok</h3>
+      <p data-cms="livok.text">Rätt musik i rätt ögonblick. Förbered egna ljudklipp från Spotify med exakt start och slut, samla dem i ett personligt bibliotek och spela dem direkt från iPad eller dator.</p>
+      <a class="more" data-cms="livok.lanktext" data-cms-attr="href:livok.lank" href="https://livok.se">Besök livok.se →</a>
+      <!--cms-bild:livok.bild:app-vis--><div class="app-vis livok"><div class="lv-pane"><div class="lv-sh"><span class="lv-t" style="font-size:16px">Min samling</span><small>4 ljudklipp</small></div><div class="lv-row"><i>01</i><b>Favoritrefrängen</b><small>0:14 – 0:32</small></div><div class="lv-row"><i>02</i><b>Lugn start</b><small>0:00 – 0:25</small></div><div class="lv-row"><i>03</i><b>Morgonlåten</b><small>0:31 – 0:51</small></div><div class="lv-row"><i>04</i><b>Sista ackordet</b><small>2:41 – 2:56</small></div></div></div><!--/cms-bild-->
     </article>
     <article class="card reveal">
-      <span class="pill plej"><i></i>Under utveckling</span>
-      <h3>Plej T:M:S</h3>
-      <p>Videoanalys för hockeytränare. Markera situationer i matcher från svensk hockey-tv med exakt tid och kommentar, och visa dem för laget i ett presentationsläge vid videogenomgången.</p>
-      <a class="more" href="#kontakt">Få besked vid lansering →</a>
-      <div class="app-vis plej"><div class="pj-pane pj"><div class="pj-brand"><span class="pj-sym">P<span>:</span></span><span>Plej T:M:S<small>Tränarstudio</small></span></div><span class="pj-k">Match · Situationer</span><div class="pj-tl"><i style="left:7%"></i><i style="left:19%;animation-delay:-1s"></i><i style="left:38%;animation-delay:-2s"></i><i style="left:69%;animation-delay:-3s"></i></div><div class="pj-row"><code>00:04:12</code><span>Powerplay</span><small>Anfall</small></div><div class="pj-row"><code>00:11:37</code><span>Uppspel</span><small>Omställning</small></div><div class="pj-row"><code>00:23:05</code><span>Boxplay</span><small>Försvar</small></div><div class="pj-row"><code>00:41:50</code><span>Mål 2–1</span><small>Anfall</small></div></div></div>
+      <span class="pill plej"><i></i><span data-cms="plej.status">Under utveckling</span></span>
+      <h3 data-cms="plej.namn">Plej T:M:S</h3>
+      <p data-cms="plej.text">Videoanalys för hockeytränare. Markera situationer i matcher från svensk hockey-tv med exakt tid och kommentar, och visa dem för laget i ett presentationsläge vid videogenomgången.</p>
+      <a class="more" data-cms="plej.lanktext" data-cms-attr="href:plej.lank" href="#kontakt">Få besked vid lansering →</a>
+      <!--cms-bild:plej.bild:app-vis--><div class="app-vis plej"><div class="pj-pane pj"><div class="pj-brand"><span class="pj-sym">P<span>:</span></span><span>Plej T:M:S<small>Tränarstudio</small></span></div><span class="pj-k">Match · Situationer</span><div class="pj-tl"><i style="left:7%"></i><i style="left:19%;animation-delay:-1s"></i><i style="left:38%;animation-delay:-2s"></i><i style="left:69%;animation-delay:-3s"></i></div><div class="pj-row"><code>00:04:12</code><span>Powerplay</span><small>Anfall</small></div><div class="pj-row"><code>00:11:37</code><span>Uppspel</span><small>Omställning</small></div><div class="pj-row"><code>00:23:05</code><span>Boxplay</span><small>Försvar</small></div><div class="pj-row"><code>00:41:50</code><span>Mål 2–1</span><small>Anfall</small></div></div></div><!--/cms-bild-->
     </article>
   </div>
 </section>
@@ -310,21 +313,21 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
 <section class="wrap sec" id="skapande" style="padding-top:40px">
   <div class="reveal">
     <div class="label mono">02 / Skapande</div>
-    <h2>Musik och 3D, för att det är roligt att skapa.</h2>
+    <h2 data-cms="skapande.rubrik">Musik och 3D, för att det är roligt att skapa.</h2>
   </div>
   <div class="split">
     <article class="card reveal">
-      <span class="pill"><i style="background:#1db954"></i>Spotify</span>
-      <h3>Andra låten är på väg</h3>
-      <div class="wave" id="wave" aria-hidden="true"></div>
-      <p>Första låten finns redan ute. Följ på Spotify så hör du nästa när den släpps.</p>
-      <a class="more" href="https://open.spotify.com/artist/0AingqsHHNdQrDKM1EdzZh">Lyssna på Spotify →</a>
+      <span class="pill"><i style="background:#1db954"></i><span data-cms="musik.etikett">Spotify</span></span>
+      <h3 data-cms="musik.rubrik">Andra låten är på väg</h3>
+      <!--cms-bild:musik.bild:card-bild--><div class="wave" id="wave" aria-hidden="true"></div><!--/cms-bild-->
+      <p data-cms="musik.text">Första låten finns redan ute. Följ på Spotify så hör du nästa när den släpps.</p>
+      <a class="more" data-cms="musik.lanktext" data-cms-attr="href:musik.lank" href="https://open.spotify.com/artist/0AingqsHHNdQrDKM1EdzZh">Lyssna på Spotify →</a>
     </article>
     <article class="card reveal">
-      <span class="pill"><i></i>3D-printing</span>
-      <h3>Från fil till föremål</h3>
-      <div class="layers"><div class="stack"><i style="--n:0"></i><i style="--n:1"></i><i style="--n:2"></i><i style="--n:3"></i><i style="--n:4"></i><i style="--n:5"></i></div></div>
-      <p>Egna designer, printade lager för lager. En webshop kan komma längre fram.</p>
+      <span class="pill"><i></i><span data-cms="tredje.etikett">3D-printing</span></span>
+      <h3 data-cms="tredje.rubrik">Från fil till föremål</h3>
+      <!--cms-bild:tredje.bild:card-bild--><div class="layers"><div class="stack"><i style="--n:0"></i><i style="--n:1"></i><i style="--n:2"></i><i style="--n:3"></i><i style="--n:4"></i><i style="--n:5"></i></div></div><!--/cms-bild-->
+      <p data-cms="tredje.text">Egna designer, printade lager för lager. En webshop kan komma längre fram.</p>
     </article>
   </div>
 </section>
@@ -332,8 +335,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
 <section class="wrap contact" id="kontakt">
   <div class="reveal">
     <div class="label mono" style="justify-content:center">Kontakt</div>
-    <h2>Låt oss bygga<br>något tillsammans.</h2>
-    <p class="lead">Frågor om apparna, musiken eller samarbeten? Skriv några rader så svarar jag så snart jag kan.</p>
+    <h2 data-cms="kontakt.rubrik">Låt oss bygga<br>något tillsammans.</h2>
+    <p class="lead" data-cms="kontakt.ingress">Frågor om apparna, musiken eller samarbeten? Skriv några rader så svarar jag så snart jag kan.</p>
     <form class="cform" id="cform" novalidate>
       <input type="hidden" name="access_key" value="aad3ec6d-b640-4a5d-abe9-fd6ca7091565">
       <input type="hidden" name="subject" value="Nytt meddelande från molla.se">
@@ -368,7 +371,7 @@ let i=0;
   else split(n)})})(h1);
 // Vågform
 const wave=document.getElementById('wave');
-for(let k=0;k<48;k++){const s=document.createElement('span');s.style.animationDelay=(-Math.random()*1.6)+'s';s.style.animationDuration=(1.2+Math.random())+'s';wave.append(s)}
+if(wave)for(let k=0;k<48;k++){const s=document.createElement('span');s.style.animationDelay=(-Math.random()*1.6)+'s';s.style.animationDuration=(1.2+Math.random())+'s';wave.append(s)}
 // Nav
 const nav=document.getElementById('nav');
 const onScroll=()=>{nav.classList.toggle('scrolled',scrollY>20);

@@ -1,0 +1,55 @@
+{
+  "seo": {
+    "titel": "Molla – digitala produkter, musik och 3D",
+    "beskrivning": "Molla bygger appar och digitala verktyg. Här samlas Livok, Plej T:M:S, musik och 3D-printing.",
+    "delningstext": "Hemmet för appar som Livok och Plej T:M:S, musik och 3D-projekt.",
+    "delningsbild": "/assets/og.png"
+  },
+  "topp": {
+    "status": "Livok och Plej T:M:S på väg",
+    "rubrik": "Jag bygger digitala verktyg",
+    "rubrik_gra": "som gör vardagen enklare.",
+    "ingress": "Molla är hemmet för mina appar, min musik och mina 3D-projekt. Allt byggs från idé till färdig produkt, ett projekt i taget."
+  },
+  "appar": {
+    "rubrik": "Två appar, byggda för att användas på riktigt.",
+    "ingress": "Från idé till färdig produkt med AI som byggpartner. Båda lanseras snart."
+  },
+  "livok": {
+    "status": "Lanseras snart",
+    "namn": "Livok",
+    "text": "Rätt musik i rätt ögonblick. Förbered egna ljudklipp från Spotify med exakt start och slut, samla dem i ett personligt bibliotek och spela dem direkt från iPad eller dator.",
+    "lanktext": "Besök livok.se →",
+    "lank": "https://livok.se",
+    "bild": ""
+  },
+  "plej": {
+    "status": "Under utveckling",
+    "namn": "Plej T:M:S",
+    "text": "Videoanalys för hockeytränare. Markera situationer i matcher från svensk hockey-tv med exakt tid och kommentar, och visa dem för laget i ett presentationsläge vid videogenomgången.",
+    "lanktext": "Få besked vid lansering →",
+    "lank": "#kontakt",
+    "bild": ""
+  },
+  "skapande": {
+    "rubrik": "Musik och 3D, för att det är roligt att skapa."
+  },
+  "musik": {
+    "etikett": "Spotify",
+    "rubrik": "Andra låten är på väg",
+    "text": "Första låten finns redan ute. Följ på Spotify så hör du nästa när den släpps.",
+    "lanktext": "Lyssna på Spotify →",
+    "lank": "https://open.spotify.com/artist/0AingqsHHNdQrDKM1EdzZh",
+    "bild": ""
+  },
+  "tredje": {
+    "etikett": "3D-printing",
+    "rubrik": "Från fil till föremål",
+    "text": "Egna designer, printade lager för lager. En webshop kan komma längre fram.",
+    "bild": ""
+  },
+  "kontakt": {
+    "rubrik": "Låt oss bygga\nnågot tillsammans.",
+    "ingress": "Frågor om apparna, musiken eller samarbeten? Skriv några rader så svarar jag så snart jag kan."
+  }
+}
